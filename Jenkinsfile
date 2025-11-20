@@ -2,28 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/<your-username>/jenkins-assignment.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo "Build Stage Running..."
-                bat 'dir'
+                echo "Building project..."
             }
         }
 
         stage('Test') {
             steps {
-                echo "Testing (example only)"
+                echo "Running tests..."
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deployment simulated..."
+                echo "Deploying (simulated)..."
             }
         }
     }
